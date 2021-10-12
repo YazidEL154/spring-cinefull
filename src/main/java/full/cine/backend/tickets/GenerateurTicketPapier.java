@@ -1,5 +1,6 @@
 package full.cine.backend.tickets;
 
+import full.cine.backend.films.Film;
 import full.cine.backend.seances.GestionnaireDeSeanceClient;
 import full.cine.backend.seances.Seance;
 
@@ -14,9 +15,14 @@ public class GenerateurTicketPapier implements GenerateurTicket{
     @Override
     public TicketDeCinema genererUnTicket(String numeroSeance) {
         Seance seance = gestionnaireDeSeanceClient.retournerSeanceParNumero(numeroSeance);
-        String ticket = "Ticket de cinema !!!\n" +
-                "Film             : " + seance.getFilm().getTitre() +
-                "numero de seance : " + seance.getNumero();
-        return new TicketDeCinemaPapier(ticket);
+        Film film = seance.getFilm();
+        String message = creationDuMessage(numeroSeance, film.getTitre(), seance.getDebut().toString());
+        return new TicketDeCinemaPapier(message);
+    }
+
+    private String creationDuMessage(String numeroSeance, String titreFilm, String date){
+        return  "numero de seance: "+numeroSeance+
+                "\nTitre du film: "+titreFilm+
+                "\ndate: "+date;
     }
 }
