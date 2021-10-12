@@ -13,7 +13,8 @@ class GenerateurTicketPapierTest {
     // GIVEN
     String titre = "L'histoire d'un test";
     LocalDateTime date = LocalDateTime.now();
-    GenerateurTicket generateurTicket = new GenerateurTicketPapier(new FakeGestionnaireSeanceClient(titre, date));
+    double prix = 12.5;
+    GenerateurTicket generateurTicket = new GenerateurTicketPapier(new FakeGestionnaireSeanceClient(titre, date, prix));
     String numeroSeance = "TEST1234";
     TicketDeCinema ticket = generateurTicket.genererUnTicket(numeroSeance);
     String stringTicket = ticket.getTicket().toString();
@@ -40,5 +41,11 @@ class GenerateurTicketPapierTest {
     @DisplayName("alors le ticket retourne un message contenant l'heure et la date du film")
     public void testGenerationTicketPapierContientHeureETDate(){
         assertTrue(stringTicket.contains(date.toString()));
+    }
+
+    @Test
+    @DisplayName("alors le ticket retourne un message contenant  le prix de la seance")
+    public void testGenerationTicketPapierContientLePrixDeLaSeance(){
+        assertTrue(stringTicket.contains(""+prix));
     }
 }

@@ -11,10 +11,12 @@ public class FakeGestionnaireSeanceClient implements GestionnaireDeSeanceClient 
 
     private String titre;
     private LocalDateTime date;
+    private double prix;
 
-    public FakeGestionnaireSeanceClient(String titre, LocalDateTime date) {
+    public FakeGestionnaireSeanceClient(String titre, LocalDateTime date, double prix) {
         this.titre = titre;
         this.date = date;
+        this.prix = prix;
     }
 
     @Override
@@ -35,6 +37,7 @@ public class FakeGestionnaireSeanceClient implements GestionnaireDeSeanceClient 
         seance.setNumero(numeroSeance);
         seance.setFilm(film);
         seance.setDebut(date);
+        seance.setPrix(prix);
         return seance;
     }
 
