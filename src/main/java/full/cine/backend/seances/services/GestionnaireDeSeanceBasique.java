@@ -1,6 +1,8 @@
-package full.cine.backend.seances;
+package full.cine.backend.seances.services;
 
-import java.util.ArrayList;
+import full.cine.backend.seances.infra.SeanceRepository;
+import full.cine.backend.seances.models.Seance;
+
 import java.util.List;
 
 public class GestionnaireDeSeanceBasique implements GestionnaireDeSeance {

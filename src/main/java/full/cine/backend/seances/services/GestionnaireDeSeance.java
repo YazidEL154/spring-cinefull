@@ -1,8 +1,4 @@
-package full.cine.backend.seances;
-
-import full.cine.backend.films.Film;
-
-import java.util.List;
+package full.cine.backend.seances.services;
 
 /**
  * Spécifications pour la gestion des seances.

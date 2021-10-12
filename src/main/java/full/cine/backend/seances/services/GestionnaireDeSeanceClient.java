@@ -1,4 +1,6 @@
-package full.cine.backend.seances;
+package full.cine.backend.seances.services;
+
+import full.cine.backend.seances.models.Seance;
 
 import java.util.List;
 

@@ -1,5 +1,8 @@
 package full.cine.backend.seances;
 
+import full.cine.backend.seances.models.Seance;
+import full.cine.backend.seances.services.GestionnaireDeSeance;
+import full.cine.backend.seances.services.GestionnaireDeSeanceBasique;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,7 +26,7 @@ class GestionnaireDeSeanceTest {
 
 
     @Test
-    @DisplayName("Je peux récupérer l'ensemble des seances sous forme de liste")
+    @DisplayName("Je peux recuperer l'ensemble des seances sous forme de liste")
     public void recupererLesSeances(){
         assertTrue(seances instanceof List);
     }
@@ -37,7 +40,7 @@ class GestionnaireDeSeanceTest {
     }
 
     @Test
-    @DisplayName("Je peux récupérer l'ensemble des seances sous forme de liste contenant les seances precedement enregistrés")
+    @DisplayName("Je peux recuperer l'ensemble des seances sous forme de liste contenant les seances precedement enregistres")
     public void recupererLesSeancesEnregistre(){
         assertTrue(seances.contains(seanceDeTest));
     }

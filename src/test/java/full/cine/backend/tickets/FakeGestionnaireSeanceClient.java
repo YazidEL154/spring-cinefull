@@ -1,8 +1,8 @@
 package full.cine.backend.tickets;
 
 import full.cine.backend.films.Film;
-import full.cine.backend.seances.GestionnaireDeSeanceClient;
-import full.cine.backend.seances.Seance;
+import full.cine.backend.seances.services.GestionnaireDeSeanceClient;
+import full.cine.backend.seances.models.Seance;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -1,9 +1,12 @@
 package full.cine.backend.seances;
 
+import full.cine.backend.seances.infra.SeanceRepository;
+import full.cine.backend.seances.models.Seance;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class FakeSeanceRepository implements SeanceRepository{
+public class FakeSeanceRepository implements SeanceRepository {
 
     List<Seance> seances = new ArrayList<>();
 

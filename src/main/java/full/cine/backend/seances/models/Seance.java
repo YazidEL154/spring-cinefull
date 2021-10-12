@@ -1,4 +1,4 @@
-package full.cine.backend.seances;
+package full.cine.backend.seances.models;
 
 import full.cine.backend.films.Film;
 import lombok.*;
