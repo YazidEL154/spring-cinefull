@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/kilrasemifir/spring-cinefull/compare/v1.1.0...v1.2.0) (2021-10-12)
+
+
+### Features
+
+* **génération de ticket:** Ajout du prix dans le ticket ([e1cf95e](https://github.com/kilrasemifir/spring-cinefull/commit/e1cf95ea16da04de8fa28ea26611252c6ae462c3))
+
 ## 1.1.0 (2021-10-12)
 
 
